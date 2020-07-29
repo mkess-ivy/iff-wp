@@ -51,6 +51,8 @@ if ( ! function_exists( 'iff_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'iff' ),
+				'footer-menu' => __(  'Footer', 'iff'),
+				'mobile-menu' => __(  'Mobile', 'iff'),
 			)
 		);
 
