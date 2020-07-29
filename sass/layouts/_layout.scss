@@ -1,0 +1,183 @@
+// Logo 
+.logo_wrapper {
+	position: relative;
+	width: 100%;
+	text-align: center;
+
+	&.footer {
+		text-align: center;
+	}
+	
+	a {
+		color: #000;
+	}
+	.logo {
+		display: none;
+
+		@include tablet {
+			max-width: 525px;
+			display: block;
+		}
+	}
+	.logo_mobile {
+		display: block;
+		margin: 0 auto;
+		width: 125px;
+
+		@include tablet {
+			display: none;
+		}
+	}
+	.logo_footer {
+		margin: 0 auto;
+		width: 200px;	
+	}
+	.logo_text {
+		font-size: 12px;
+		line-height: 16px;
+		-webkit-font-smoothing: antialiased;
+	}	
+}
+.overlay_logo {
+	background-color: $white;
+	border-top: 4px solid $red;
+	// padding-bottom: 75px;
+	@include tablet {
+		padding-bottom: 0;
+	}
+}
+
+// Home Navigation Section
+.copy {
+	font-size: 18px;
+	line-height: 28px;
+	text-align: center;
+	@include tablet {
+
+	}
+}
+.copy_height {
+	@include tablet {
+		height: 185px;	
+	}
+}
+.home_nav {
+	padding-bottom: 100px;
+	@include tablet {
+		padding: 0 25px;
+	}
+}
+.section_title {
+	padding: 75px 0;
+	font-weight: 700;
+	font-size: 34px;
+	text-align: center;
+
+	@include tablet {
+		padding: 75px 0 100px;
+	}
+}
+.section_header {
+	text-align: center;
+	font-size: 18px;
+	line-height: 24px;
+	padding-bottom: 50px;
+
+	span {
+		display: block;
+		font-size: 24px;
+		color: $blue;
+	}	
+}
+
+// CTA
+.cta {
+	color: $red;
+
+	div {
+		border: 2px solid;
+		width: 130px;
+		border-radius: 6px;
+		padding: 1px 6px;
+		text-align: center;
+		margin: 25px auto;
+	}
+
+	&:hover {
+		color: $red;
+	}
+}
+
+// Wrapper
+.wrapper {
+	
+	max-width: 350px;
+
+	@include palm {
+		max-width: 500px;
+	}
+	@include tablet {
+
+		max-width: 980px;
+		width: auto;
+		margin-bottom: 75px;
+	}
+}
+.blue_wrapper {
+	@extend .wrapper;
+	@include tablet {
+		margin-bottom: 0;
+	}
+}
+.family_wrapper {
+	margin-top: 75px;
+}
+
+// Blue Layout
+.blue_layout {
+	background: $blue-layout;
+	color: #fff;
+	padding: 50px 0 25px;
+}
+.blue {
+	color: $blue-layout;
+}
+.page_title {
+	text-align: center;
+	font-size: 20px;
+	line-height: 28px;
+	padding-bottom: 25px;
+	@include tablet {
+		font-size: 30px;
+		line-height: 40px;
+	}
+}
+.caption {
+	font-size: 14px;
+	line-height: 22px;
+	text-align: center;
+}
+
+.icon {
+	text-align: center;
+	padding-bottom: 35px;
+}
+
+// Separator 
+.separator {
+	width: 200px;
+	height: 1px;
+	background-color: #979797;
+	margin: 10px auto;
+
+	@include tablet {
+		width: 1px;
+		height: 125px;
+		margin: auto 20px;
+	}
+}
+.separator_noline {
+	margin: 25px 0;
+	width: 100%;
+
+}

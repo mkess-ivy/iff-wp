@@ -1,0 +1,52 @@
+.site-footer {
+	background-color: rgba(216,216,216,0.2);
+	border-bottom: $red 4px solid;
+	padding-top: 100px;
+
+	@include tablet {
+		padding-top: 10px;
+	}
+}
+.footer_wrapper {
+	margin-bottom: 25px !important;
+	width: 100%;
+}
+.list_wrapper {
+	margin-bottom: 25px;
+}
+.list {
+	text-align: center;
+	margin-top: 40px;
+
+	.menu_header {
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		padding-bottom: 25px;
+	}
+
+	li {
+		font-size: 20px;
+		line-height: 32px;
+
+		@include tablet {
+			font-size: 18px;
+		}
+
+		a span {
+			display: block;
+			text-align: center;
+			font-size: 14px;
+			line-height: 15px;
+			padding-bottom: 20px;
+		}
+	}
+}
+
+.copyright {
+	font-size: 12px;
+}
+.menu_small_text {
+	font-size: 14px !important;
+}
+

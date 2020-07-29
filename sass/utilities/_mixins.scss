@@ -1,0 +1,50 @@
+// Media Query Breakpoints (Mobile-First)
+$on-small:				375px;
+$on-palm:          		600px;
+$on-tablet:        		767px;
+$on-laptop:				900px;
+$on-desktop:			1280px;
+$on-widescreen:			1440px;
+$on-tv:					1920px;
+
+@mixin small {
+	@media screen and (min-width: #{$on-small}) {
+		@content;
+	}
+}
+
+@mixin palm {
+	@media screen and (min-width: #{$on-palm}) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media screen and (min-width: #{$on-tablet}) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media screen and (min-width: #{$on-laptop}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media screen and (min-width: #{$on-desktop}) {
+		@content;
+	}
+}
+
+@mixin widescreen {
+	@media screen and (min-width: #{$on-widescreen}) {
+		@content;
+	}
+}
+
+@mixin tv {
+	@media screen and (min-width: #{$on-tv}) {
+		@content;
+	}
+}

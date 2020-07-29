@@ -1,0 +1,73 @@
+// Family History
+.family_col {
+	@extend .copy;
+	text-align: left;
+	margin-bottom: 10px;
+
+	@include tablet {
+		padding: 0 50px;
+	}
+}
+.family_image {
+	margin-bottom: 10px !important;
+}
+
+// What We Do
+.group {
+	position: relative;
+	margin-bottom: 50px;
+	text-align: center;
+
+	@include tablet {
+		text-align: left;
+	}
+}
+.group_header {
+	
+	font-size: 24px;
+	text-align: center;
+
+	@include tablet {
+		padding: 0 45px;
+	}
+}
+.group_number {
+	font-size: 45px;
+	color: rgba(41,66,86,0.3);
+	display: block;
+
+	@include tablet {
+		display: initial;
+		position: absolute;
+		top: -20px;
+		left: -15px;
+	}
+}
+.group_copy_wrapper {
+	margin-top: 125px;
+
+	@include tablet {
+		margin-top: 0;
+		padding: 0 50px;
+	}
+}
+
+// Get Involved
+.donate_wrapper {
+	text-align: center;
+	padding: 25px 0;
+
+	@include tablet {
+		padding: 0 40px;	
+	}
+
+	.address {
+		padding-bottom: 15px;
+	}
+}
+.donate_title {
+	padding-bottom: 25px;
+}
+.title_get_involved {
+	padding: 50px 0;
+}

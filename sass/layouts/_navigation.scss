@@ -1,0 +1,250 @@
+/* No Scroll w/ Overlay Present */
+body.noScroll {
+    overflow: hidden;
+  }
+  /* Header & Overlay Menu */
+  #menu-container {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 9007;
+    @include tablet { 
+      position: absolute;
+      top: -10px;
+      right: 40px;
+    }
+  }
+  .menuButton { 
+    text-indent: 0; 
+    color: #fff;  
+    position: relative; 
+    background-color: transparent;
+    border: none;
+  }
+  .menuButton:hover { 
+    -o-transition:.75s;
+    -ms-transition:.75s; 
+    -moz-transition:.75s; 
+    -webkit-transition:.75s; 
+    transition:.75s;
+  }
+  .menuButton:active { 
+    position: relative; 
+    top: 1px; 
+  }
+  .menu-icons img { 
+    width: 5%; 
+  }
+  .menu-txt {
+    color: $red;
+    font-size: 55px;
+    cursor: pointer;
+  }
+  .menu-txt:hover {
+    color: $blue;
+  }
+  #overlay-menu {}
+  
+  .overlay_container {
+      position: relative;
+      height: 57vh;
+  }
+  .overlay { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-position: bottom left;
+    background-color: $blue;
+    z-index: 9000; 
+  }
+  .overlay nav { 
+    text-align: center;
+    width: 100%;
+  }
+  .overlay ul { 
+    list-style: none; 
+    padding: 0; 
+    @include tablet {
+        margin: auto;
+        text-align: center;
+        width: auto;
+    }
+  }
+  .overlay ul li { 
+    padding: 0; 
+    margin:0; 
+    width: 100%;
+    margin-bottom: 7px;
+    font-family: $brand-font;
+    font-size: 30px;
+    line-height: 40px;
+    text-transform: lowercase;
+    -webkit-font-smoothing: antialiased;
+  
+    @include small {
+      line-height: 50px;
+    }
+    
+    @include tablet {
+      width: auto;
+      float: left;
+      font-size: 22px;
+      margin-right: 25px;
+    }
+  
+    @include laptop {
+      font-size: 24px;
+      margin-right: 40px;
+    }
+  }
+  .overlay ul li:last-child {
+      margin-right: 0;
+  }
+  .overlay ul li a { 
+    text-decoration: none;
+    color: $white;
+  }
+  .overlay ul li a:hover {  
+    color: rgba(255,255,255,0.5);
+    @include tablet {
+        border-bottom: 1px solid;
+        padding-bottom: 7px;
+    }
+  }
+  .overlay ul li a:hover::before {
+      @include tablet {
+          content:'';
+          display: block;
+          width: 46px;
+          height: 37px;
+          background-image: url('/img/tree_logo.png');
+          text-align: center;
+          margin: -37px auto 0;
+          background-size: contain;
+      }
+  }
+  .overlay-close { 
+    width: 35px; 
+    height: 30px; 
+    position: absolute;
+    overflow: hidden; 
+    border: none; 
+    background-color: transparent; 
+    outline: none; 
+    z-index: 100;
+    right: 0;
+    left: 0;
+    margin: auto;
+    // top: 120px;
+    top: 200px;
+   
+    @include tablet {
+      right: 40px; 
+      top: 18px;
+      left: auto;
+    }
+  }
+  .overlay-close:hover {
+    color: $red;
+  }
+  .overlay-data { 
+    opacity: 0; 
+    visibility: hidden; 
+    -webkit-transition: opacity 0.5s, visibility 0s 0.5s; 
+    transition: opacity 0.5s, visibility 0s 0.5s; 
+  }
+  .overlay-open { 
+    opacity: 1; 
+    visibility: visible; 
+    -webkit-transition: opacity 0.5s; 
+    transition: opacity 0.5s; 
+  }
+  
+  .main-nav {
+    width:calc(100vh - 15px);
+    height: 80px;
+    position:fixed;
+    bottom: 100px;
+    z-index: 9005;
+    color: $blue;
+    left: 15px;
+    line-height: 35px;
+    
+    @include tablet {
+      -webkit-transform-origin: left top;
+      -webkit-transform:rotate(-90deg) translateX(-100%);  
+      top: -10px;
+      height:28px;
+      left: 5px;
+      line-height: 20px;
+    }
+    @include laptop {
+      left: 20px;
+    }
+  }
+  ul.nav li {    
+    height:100%;
+    list-style: none;
+    font-family: $brand-font;
+    font-size: 20px;
+    @include tablet {
+      margin-right:20px;
+      float:left;
+      line-height:20px;
+      font-size: 16px;
+    }
+    @include laptop {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    @include tv {
+      font-size: 28px;
+      line-height: 33px;
+      margin-right: 30px;
+    }
+  }
+  ul.nav li a {
+    color: darken($red, 15%);
+    cursor: pointer;
+  }
+  ul.nav li a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid;
+  }
+  [type=reset], [type=submit], button, html [type=button] {
+      background-color: transparent !important;
+      border: none !important;
+      border-radius: 0 !important;
+      color: auto !important;
+      display: initial !important;
+      line-height: initial !important;
+      padding: 0 !important;
+  }
+  .menu_list_container {
+      height: auto;
+  }
+  .bottom_menu_content {
+      position: absolute;
+      right: 0;
+      left: 0;
+    bottom: -100px;
+    text-align: center;
+  
+    @include small {
+      bottom: -125px;
+    }
+  }
+  .menu_quote {
+      font-size: 14px;
+      width: 55%;
+      color: #fff;
+      margin: 0 auto 20px;
+      -webkit-font-smoothing: antialiased;
+  }
+  .menu_quote_author {
+      font-size: 10px;
+      padding-top: 15px;
+  }

@@ -1,0 +1,54 @@
+.masthead_hero {
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+	height: calc(100vh - 224px);
+	position: relative;
+	transition: height 999999s;
+
+	@include tablet {
+		height: 90vh;
+	}
+}
+
+.quote {
+	padding: 20px;
+	background: rgba(122,48,40,0.7);
+	mix-blend-mode: luminosity;
+	color: #fff;
+	position: absolute;
+	margin-left: 30px;
+	width: 275px;
+	font-size: 18px;
+	bottom: 25px;
+
+	@include tablet {
+		width: 375px;
+		font-size: 26px;	
+		bottom: 100px;
+	}
+}
+
+.masthead_title {
+	color: $red;
+	background: rgba(255,255,255,0.8);
+	padding: 20px;
+	font-size: 20px;
+	border: 5px solid #fff;
+
+	@include tablet {
+		padding: 40px;
+	}
+}
+.section_title_header {
+
+	font-size: 26px;
+	padding: 35px 0;
+	font-weight: 700;
+	text-align: center;
+
+	@include tablet {
+		font-size: 28px;
+		padding: 40px 0;
+	}
+}
