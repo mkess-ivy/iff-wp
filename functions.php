@@ -46,6 +46,7 @@ if ( ! function_exists( 'iff_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
@@ -179,7 +180,7 @@ add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+/** require get_template_directory() . '/inc/custom-header.php'; */
 
 /**
  * Custom template tags for this theme.
@@ -203,3 +204,16 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+/**
+ * Add WP Options Page via ACF Pro
+ */
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	acf_add_options_sub_page('Header');
+	acf_add_options_sub_page('News');
+	acf_add_options_sub_page('Footer');
+	acf_add_options_sub_page('Pop-Up Message');
+}

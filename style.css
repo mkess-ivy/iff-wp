@@ -48,6 +48,89 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Alignments
 
 --------------------------------------------------------------*/
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0; }
+
+/**
+ * Basic styling
+ */
+body {
+  font-family: "Libre Baskerville", serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #111;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased; }
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6, blockquote, pre,
+ul, ol, dl, figure {
+  margin-bottom: 15px; }
+
+p {
+  margin-bottom: 48px; }
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle; }
+
+/**
+ * Lists
+ */
+li > ul,
+li > ol {
+  margin-bottom: 0; }
+
+/**
+ * Links
+ */
+a {
+  color: #111;
+  text-decoration: none; }
+  a:visited {
+    color: #401915; }
+  a:hover {
+    color: #7A3028;
+    text-decoration: none; }
+  a:active, a:focus {
+    text-decoration: none; }
+
+a.donate {
+  color: #fff;
+  text-decoration: none; }
+  a.donate:hover {
+    color: #7A3028;
+    text-decoration: none; }
+
+/**
+ * Wrapper
+ */
+.wrapper, .blue_wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px; }
+
+/**
+ * Clearfix
+ */
+.wrapper:after, .blue_wrapper:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -351,10 +434,7 @@ input,
 select,
 optgroup,
 textarea {
-  color: #404040;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5; }
+  font-size: 1rem; }
 
 h1,
 h2,
@@ -422,9 +502,6 @@ ul,
 ol {
   margin: 0 0 1.5em 3em; }
 
-ul {
-  list-style: disc; }
-
 ol {
   list-style: decimal; }
 
@@ -458,17 +535,6 @@ table {
 
 /* Links
 --------------------------------------------- */
-a {
-  color: #4169e1; }
-  a:visited {
-    color: #800080; }
-  a:hover, a:focus, a:active {
-    color: #191970; }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
-    outline: 0; }
-
 /* Forms
 --------------------------------------------- */
 button,
@@ -581,18 +647,19 @@ textarea {
 
 .list {
   text-align: center;
-  margin-top: 40px; }
+  margin-top: 40px;
+  list-style: none; }
   .list .menu_header {
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     padding-bottom: 25px; }
   .list li {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 32px; }
     @media screen and (min-width: 767px) {
       .list li {
-        font-size: 18px; } }
+        font-size: 20px; } }
     .list li a span {
       display: block;
       text-align: center;
@@ -604,7 +671,16 @@ textarea {
   font-size: 12px; }
 
 .menu_small_text {
-  font-size: 14px !important; }
+  font-size: 14px !important;
+  line-height: 0.4 !important; }
+
+#menu-footer {
+  list-style: none;
+  margin: 0; }
+
+@media screen and (min-width: 767px) {
+  .footer_email {
+    font-size: 20px; } }
 
 .logo_wrapper {
   position: relative;
@@ -704,6 +780,9 @@ textarea {
     margin-bottom: 0; } }
 
 .family_wrapper {
+  margin-top: 75px; }
+
+.wrapper.theme, .theme.blue_wrapper {
   margin-top: 75px; }
 
 .blue_layout {
@@ -897,7 +976,9 @@ body.noScroll {
 
 .overlay ul li a {
   text-decoration: none;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  border-bottom: 1px solid #294256;
+  padding-bottom: 7px; }
 
 .overlay ul li a:hover {
   color: rgba(255, 255, 255, 0.5); }
@@ -1034,6 +1115,9 @@ ul.nav li a:hover {
   font-size: 10px;
   padding-top: 15px; }
 
+.menu ul {
+  list-style: none !important; }
+
 .family_col {
   text-align: left;
   margin-bottom: 10px; }
@@ -1101,7 +1185,6 @@ ul.nav li a:hover {
   display: block;
   width: 100%; }
   .main-navigation ul {
-    display: none;
     list-style: none;
     margin: 0;
     padding-left: 0; }
@@ -1156,10 +1239,6 @@ ul.nav li a:hover {
 --------------------------------------------- */
 .sticky {
   display: block; }
-
-.post,
-.page {
-  margin: 0 0 1.5em; }
 
 .updated:not(.published) {
   display: none; }
@@ -1322,7 +1401,7 @@ ul.nav li a:hover {
 
 .popup-msg {
   text-align: center;
-  padding: 10px 10px 25px;
+  padding: 10px 10px 0;
   font-size: 14px;
   line-height: 1.4; }
   .popup-msg a {
@@ -1348,6 +1427,41 @@ ul.nav li a:hover {
     .popup-cta div:hover {
       background: #FFFFFF;
       color: #7A3028; }
+
+h1.entry-title {
+  display: none; }
+
+h2.entry-title {
+  display: block; }
+
+.blog-title {
+  text-align: center;
+  margin: 125px 0 50px;
+  color: #000; }
+
+@media screen and (min-width: 767px) {
+  .iff_post {
+    width: 50%;
+    padding-right: 25px;
+    float: left; } }
+
+.singlepost-title {
+  font-size: 20px;
+  padding: 20px 0 50px; }
+  .singlepost-title a {
+    color: #000; }
+    .singlepost-title a:hover {
+      color: #7A3028; }
+
+#mc_embed_signup_scroll {
+  width: 85%;
+  margin: 0 auto 50px; }
+
+.theme-title {
+  font-weight: bold; }
+  @media screen and (min-width: 600px) {
+    .theme-title {
+      font-size: 20px; } }
 
 /*--------------------------------------------------------------
 # Plugins

@@ -15,15 +15,21 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
+	<div class="masthead_hero" style="background-image:url( 
+		<?php echo esc_url(the_field('iffblog_hero_img', 'option')['url']); ?> 
+	);"></div>
 
+	<div class="wrapper">
 		<?php
+		
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) :
 				?>
+				
 				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+					<h1 class="blog-title"><?php single_post_title(); ?></h1>
 				</header>
 				<?php
 			endif;
@@ -49,9 +55,9 @@ get_header();
 
 		endif;
 		?>
-
-	</main><!-- #main -->
+	</div>
+</main><!-- #main -->
 
 <?php
-get_sidebar();
+
 get_footer();

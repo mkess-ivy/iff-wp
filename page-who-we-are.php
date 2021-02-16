@@ -30,43 +30,33 @@ get_header();
 
     endwhile; // End of the loop.
     ?>
+    <div class="section_title_header"><?php the_field('wwa_page_title');?></div>
+    <div class="masthead_hero" style="background-image:url(<?php echo esc_url(get_field('wwa_hero_img')['url']); ?>);"></div>
 
     <div class="frow wrapper">
 
         <div class="frow family_wrapper">
             <div class="col-sm-1-2 family_col">
                 <div class="icon">
-                    <img src="http://localhost:8888/wp-content/uploads/2020/07/icon-tree.png" />
+                    <img src="<?php echo get_field('wwa_icon')['url'] ?>" />
                 </div>
                 
                 <div class="section_header">
-                    Our<span>{{ page.vision_title }}</span>
+                    <?php the_field('section1_title');?><span><?php the_field('section1_span_title'); ?></span>
                 </div>
                 
-                <p>{{ page.vision_paragraph_1 }}</p>
-
-                <p>{{ page.vision_paragraph_2 }}</p>
-
-                <p>{{ page.vision_paragraph_3 }}</p>
-
-                <p>{{ page.vision_paragraph_4 }}</p>
+                <p><?php the_field('section1_description'); ?></p>
             </div>
             <div class="col-sm-1-2 family_col">
                 <div class="icon">
-                    <img src="http://localhost:8888/wp-content/uploads/2020/07/icon-tree.png" />
+                    <img src="<?php echo get_field('wwa_icon')['url'] ?>" />
                 </div>
                 
                 <div class="section_header">
-                    Our<span>{{ page.mission_title }}</span>
+                <?php the_field('section2_title');?><span><?php the_field('section2_span_title');?></span>
                 </div>
                 
-                <p>{{ page.mission_paragraph_1 }}</p>
-
-                <p>{{ page.mission_paragraph_2 }}</p>
-
-                <p>{{ page.mission_paragraph_3 }}</p>
-
-                <p>{{ page.mission_paragraph_4 }}</p>
+                <p><?php the_field('section2_description'); ?></p>
             </div>
         </div>
 

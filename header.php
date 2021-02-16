@@ -17,16 +17,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<meta name="author" content="SVNCRWNS" />
-  	<meta name="description" content="Ingram Family Foundation is a non-profit organization whose goal is to support initiatives that increase sustainability for black communities" />
-	<meta name="keywords" content="education, financial literacy, fresh start programs, jobs, employment, agriculture, food, healthcare, baltimore, maryland, black businesses, black organizations" />
-	<!-- Meta OG Tags -->
-	<meta name="og:title" content="Ingram Family Foundation" />
-	<meta name="og:title" content="Non-profit organization supporting initiatives and investing in community" />
-	<meta property="og:url" content="http://www.ingramfamilyfoundation.org" />
-	<meta property="og:image" content="" />
+	<!-- Meta Info -->
+	<meta name="owner" content="Rufus Ingram">
+  <meta name="name" content="The Ingram Family Foundation">
+  <meta name="description" content="Ingram Family Foundation is a non-profit organization with a mission to promote thoughtful analysis, discussions and actions that will help to create a prosperous and equitable future for Black communities.">
+  <meta name="developer" content="SVNCRWNS">
+  <meta name="keywords" content="baltimore sponsorship, baltimore nonprofit, sponsorship, youth organizations, black community, black sustainability">
 
-  <link rel="shortcut icon" href="http://www.bhmhs.org/wp-content/uploads/2020/07/favicon.jpg" type="image/png" /> 
+  <!-- OG Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Ingram Family Foundation">
+  <meta property="og:description" content="Ingram Family Foundation is a non-profit organization with a mission to promote thoughtful analysis, discussions and actions that will help to create a prosperous and equitable future for Black communities.">
+  <meta property="og:url" content="http://www.theingramfamilyfoundation.org">
+  <meta property="og:image" content="/img/hero_whoweare.jpg">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Ingram Family Foundation">
+  <meta name="twitter:description" content="Ingram Family Foundation is a non-profit organization with a mission to promote thoughtful analysis, discussions and actions that will help to create a prosperous and equitable future for Black communities.">
+  <meta name="twitter:image" content="/img/hero_whoweare.jpg">
+  <meta name="twitter:url" content="http://www.theingramfamilyfoundation.org">
+  <link rel="shortcut icon" href="/favicon.ico" />
+
+  <title>The Ingram Family Foundation</title> 
 
 	<?php wp_head(); ?>
 </head>
@@ -40,8 +52,8 @@
 		<div class="site-branding">
 			<div class="logo_wrapper">
 				<a href="/">
-					<img src="http://localhost:8888/wp-content/uploads/2020/07/iff_logo_short.png" class="logo" />
-					<img src="http://localhost:8888/wp-content/uploads/2020/07/iff_logo_long.png" class="logo_mobile" />
+					<img src="<?php echo get_field('header_logo', 'option')['url']?>" class="logo" />
+					<img src="<?php echo get_field('header_logo_mobile', 'option')['url']?>" class="logo_mobile" />
 				</a>
 			</div>
 
@@ -59,8 +71,8 @@
 				<div class="overlay_logo">
 					<div class="logo_wrapper">
 						<a href="/">
-							<img src="http://localhost:8888/wp-content/uploads/2020/07/iff_logo_short.png" class="logo" />
-							<img src="http://localhost:8888/wp-content/uploads/2020/07/iff_logo_long.png" class="logo_mobile" />
+							<img src="<?php echo get_field('header_logo','option')['url']?>" class="logo" />
+							<img src="<?php echo get_field('header_logo_mobile','option')['url']?>" class="logo_mobile" />
 						</a>
 					</div>
 				</div>
@@ -84,10 +96,10 @@
 
 					<div class="frow">
 						<div class="bottom_menu_content">
-							<div class="menu_quote">“Deep Roots, Strong Branches, Solid Fruits”
-							<div class="menu_quote_author">- The Ingram Family Foundation</div>
+							<div class="menu_quote"><?php the_field('menu_quote','option')?>
+							<div class="menu_quote_author"><?php the_field('menu_quote_author','option')?></div>
 							</div>
-							<div class="menu_logo"><img src="http://localhost:8888/wp-content/uploads/2020/07/tree_logo.png" width="30" /></div>
+							<div class="menu_logo"><img src="<?php echo get_field('menu_hover_icon','option')['url']?>" width="30" /></div>
 						</div>
 					</div><!-- .frow -->
 

@@ -33,21 +33,18 @@ get_header();
 
 <div class="blue_layout">
     <div class="frow blue_wrapper">
-        <div class="page_title">{{ page.title }}</div>
+        <div class="page_title"><?php the_field('fh_title');?></div>
 
         <div class="frow family_wrapper">
             <div class="col-sm-1-2 family_col">
-                <p>{{ page.family_paragraph_1 }}</p>
-
-                <p>{{ page.family_paragraph_2 }}</p>
+                <?php the_field('left_paragraph'); ?>
             </div>
             <div class="col-sm-1-2 family_col">
-                <p>{{ page.family_paragraph_3 }}</p>
+                <?php the_field('right_paragraph'); ?>
 
                 <p class="family_image">
-                    <img src="{{ page.caption_img }}" />
-                    <div class="caption">{{ page.caption_name }}<br/>
-                    {{ page.caption_smalltext }}</div>
+                    <img src="<?php echo get_field('right_img')['url'] ?>" />
+                    <div class="caption"><?php the_field('img_caption');?></div>
                 </p>
             </div>
         </div>

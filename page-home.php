@@ -32,33 +32,57 @@ get_header();
 		?>
 
         <!-- MastHead -->
-        <div class="masthead_hero" style="background-image:url({{ page.masthead_bg }});">
+        <div class="masthead_hero" style="background-image: url('<?php echo esc_url(get_field('home_hero_img')['url']); ?>');">
 
             <div class="quote">
-                "{{ page.masthead_quote }}"
+                "<?php the_field('hero_quote'); ?>"
             </div>
 
         </div>
 
-        <div class="section_title">{{ page.section-title }}</div>
+        <div class="section_title"><?php the_field('learn_title'); ?></div>
 
         <div class="frow wrapper">
-            {% for nav in site.data.navigation %}
+            
             <div class="col-sm-1-3 home_nav">
                 
-                <div class="section_header">{{ nav.header }}<span>{{ nav.subheader }}</span></div>
+                <div class="section_header"><?php the_field('column1_title');?><span><?php the_field('column1_span_title');?></span></div>
                 <div class="copy copy_height">
-                    {{ nav.copy }}
+                    <?php the_field('column1_description');?>
                 </div>
                 
-                <a class="cta" href="{{ nav.cta-url }}">
+                <a class="cta" href="<?php the_field('column1_link');?>">
                     <div>Learn More</div>
                 </a>
             </div>
-            {% endfor %}
+
+            <div class="col-sm-1-3 home_nav">
+                
+                <div class="section_header"><?php the_field('column2_title');?><span><?php the_field('column2_span_title');?></span></div>
+                <div class="copy copy_height">
+                    <?php the_field('column2_description');?>
+                </div>
+                
+                <a class="cta" href="<?php the_field('column2_link');?>">
+                    <div>Learn More</div>
+                </a>
+            </div>
+
+            <div class="col-sm-1-3 home_nav">
+                
+                <div class="section_header"><?php the_field('column3_title');?><span><?php the_field('column3_span_title');?></span></div>
+                <div class="copy copy_height">
+                    <?php the_field('column3_description');?>
+                </div>
+                
+                <a class="cta" href="<?php the_field('column3_link');?>">
+                    <div>Learn More</div>
+                </a>
+            </div>
+            
         </div>
 
-        <div class="newsletter">
+        <div class="newsletter" style="background-image:url('<?php echo esc_url(get_field('subscribe_bg')['url']); ?>');">
             <!-- Begin Mailchimp Signup Form -->
             <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
             
@@ -114,8 +138,8 @@ get_header();
                 <form action="https://ingramfamilyfoundation.us16.list-manage.com/subscribe/post?u=eaf0fcf4438b529a92608d5bc&amp;id=3e08bfb85f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
                     <div id="mc_embed_signup_scroll">
-                        <h2>Subscribe.</h2>
-                        <p>Sign up to receive emails from our team regarding news, partnerships and follow our work in the community.</p>
+                        <h2><?php the_field('subscribe_title'); ?></h2>
+                        <p><?php the_field('subscribe_description'); ?></p>
 
                         <div class="mc-field-group">
                             <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
@@ -147,11 +171,11 @@ get_header();
                 <div class="mask active" role="dialog"></div>
                 <div class="modal" role="alert">
                     <button class="popup-close" role="button">X</button>
-                    <div class="popup-bg" style="background-image:url('{{ page.popup_bg }}');"></div>
+                    <div class="popup-bg" style="background-image:url(<?php echo esc_url(get_field('popup_bg','option')['url']); ?>);"></div>
                     
-                    <div class="popup-msg">{{ page.popup_msg_1 }}<a href="{{ page.popup_link }}">{{ page.popup_link_text }}</a>{{ page.popup_msg_2 }}</div>
+                    <div class="popup-msg"><?php the_field('popup_message','option');?></div>
                     
-                    <a class="popup-cta" href="{{ site.donate_link }}" target="_blank"><div>{{ page.donate_link_text }}</div></a>
+                    <a class="popup-cta" href="<?php the_field('popup_donate_link','option');?>" target="_blank"><div><?php the_field('popup_link_text','option'); ?></div></a>
                 </div>
             </div>
 

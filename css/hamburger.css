@@ -6,41 +6,29 @@
  * @link https://github.com/jonsuh/hamburgers
  */
  .hamburger {
-    padding: 5px 5px;
-    display: inline-block;
-    cursor: pointer;
-    transition-property: opacity, filter;
-    transition-duration: 0.15s;
-    transition-timing-function: linear;
-    font: inherit;
-    color: inherit;
-    text-transform: none;
-    background-color: transparent !important;
-    border-radius: 50%;
-    border: 0;
-    margin: 0;
-    overflow: visible;
-    position: fixed;
-    z-index: 11111;
-    outline: transparent;
-    right: 20px;
-    top: 25px;
-  }
-  /*@media screen and (min-width:750px) {
-      .hamburger {
-          right: 50px;
-          bottom: 15vh;
-      }
-  }
-  @media screen and (min-width: 1200px) {
-      .hamburger {
-          right: 35px;
-      }
-  }*/
-  .hamburger:hover {
-      /* opacity: 0.7;  */
-      background-color: $white;
-  }
+  /* padding: 15px 15px; */
+  padding: 5px 5px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  border-radius: 50%;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+  position: fixed;
+  z-index: 11111;
+  outline: transparent;
+  right: 20px;
+  top: 4.5vh;
+}
+.hamburger:hover {
+  background-color: #294256;
+}
   
   .hamburger-box {
     width: 23px;

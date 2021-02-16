@@ -73,7 +73,7 @@
 }
 .popup-msg {
 	text-align: center;
-	padding: 10px 10px 25px;
+	padding: 10px 10px 0;
 	font-size: 14px;
 	line-height: 1.4;
 
@@ -108,5 +108,54 @@
 			background: $white;
 			color: $red;
 		}
+	}
+}
+
+h1.entry-title {
+	display: none;
+}
+
+// Blogs
+h2.entry-title {
+	display: block;
+}
+.blog-title {
+	text-align: center;
+	margin: 125px 0 50px;
+	color: $black;
+}
+.iff_post {
+	@include tablet {
+		width: 50%;
+		padding-right: 25px;
+		float: left;
+	}
+}
+.singlepost-title {
+	font-size: 20px;
+	padding: 20px 0 50px;
+
+	a {
+		color: $black;
+
+		&:hover {
+			color: $red;
+		}
+	}
+}
+
+// Subscribe
+
+#mc_embed_signup_scroll {
+	width: 85%;
+	margin: 0 auto 50px;
+}
+
+// Theme Template
+.theme-title {
+	font-weight: bold;
+
+	@include palm {
+		font-size: 20px;
 	}
 }

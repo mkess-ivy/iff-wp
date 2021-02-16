@@ -14,43 +14,40 @@
 	<footer id="colophon" class="site-footer">
 		<div class="logo_wrapper footer">
 			<a href="/">
-				<img src="/img/iff_logo_short.png" class="logo_footer" />
+				<img src="<?php echo get_field('footer_img', 'option')['url'] ?>" class="logo_footer" />
 			</a>
 		</div>
 		
 		<div class="frow wrapper footer_wrapper">
 			<div class="col-sm-2-5 list_wrapper">
 				<!-- Navigation Menu -->
-				<!-- <ul class="list"> -->
-					<div class="menu_header">navigation</div>
+				 <ul class="list"> 
+					<div class="menu_header"><?php the_field('footer_col1_title','option');?></div>
 					<?php
 						wp_nav_menu( array(
 							'theme_location' => 'footer-menu',
 						) );
 					?>
-				<!-- </ul> -->
+				</ul>
 			</div>
 			<div class="separator"></div>
 			<div class="col-sm-2-5 list_wrapper">
 				<!-- Connect Menu -->
 				<ul class="list">
-					<div class="menu_header">connect</div>
-					<li><a href="mailto:info@ingramfamilyfoundation.org">info@<span>ingramfamilyfoundation.org</span></a></li>
-					<li><a href="tel:4103583538">410.358.4613</a></li>
+					<div class="menu_header"><?php the_field('footer_col2_title','option');?></div>
+					<li><a href="mailto:<?php the_field('footer_email_address','option');?>" class="footer_email"><?php the_field('footer_email_address','option');?></a></li>
+					<li><a href="tel:<?php the_field('footer_phone_number','option');?>"><?php the_field('footer_phone_number','option');?></a></li>
 					<br/>
-					<li class="menu_small_text">P.O. Box 5780</li>
-					<li class="menu_small_text">Pikesville, MD 21282</li>
+					<li class="menu_small_text"><?php the_field('footer_address','option');?></li>
 				</ul>
 			</div>
-			<div class="copyright">&copy; 2017-2020. All Rights Reserved.</div>
+			<div class="copyright">&copy; <?php the_field('footer_copyright', 'option');?></div>
 		</div>
 	</footer><!-- #colophon -->
-
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/main.js"></script>
 	
-
 	<script type="text/javascript" src="https://downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us16.list-manage.com","uuid":"eaf0fcf4438b529a92608d5bc","lid":"3e08bfb85f","uniqueMethods":true}) })</script>
 	<!-- Google Analytics -->
 	<script>
