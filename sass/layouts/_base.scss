@@ -1,4 +1,5 @@
 @import "../utilities/variables";
+@import "../utilities/mixins";
 
 /**
  * Reset some basic elements
@@ -92,9 +93,14 @@ a.donate {
 .wrapper {
     margin-right: auto;
     margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
+    padding-right: $spacing-unit/2;
+    padding-left: $spacing-unit/2;
     @extend %clearfix;
+
+    @include tablet {
+        padding-right: $spacing-unit;
+        padding-left: $spacing-unit;
+    }
 }
 
 /**

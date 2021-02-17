@@ -120,8 +120,12 @@ a.donate {
 .wrapper, .blue_wrapper {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 30px;
-  padding-left: 30px; }
+  padding-right: 15px;
+  padding-left: 15px; }
+  @media screen and (min-width: 767px) {
+    .wrapper, .blue_wrapper {
+      padding-right: 30px;
+      padding-left: 30px; } }
 
 /**
  * Clearfix
@@ -827,7 +831,7 @@ textarea {
   margin: 25px 0;
   width: 100%; }
 
-.masthead_hero {
+.masthead_hero, .singleblog_hero, .blog_hero {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -835,7 +839,7 @@ textarea {
   position: relative;
   transition: height 999999s; }
   @media screen and (min-width: 767px) {
-    .masthead_hero {
+    .masthead_hero, .singleblog_hero, .blog_hero {
       height: 90vh; } }
 
 .quote {
@@ -1452,6 +1456,89 @@ h2.entry-title {
     color: #000; }
     .singlepost-title a:hover {
       color: #7A3028; }
+
+.singleblog_hero, .blog_hero {
+  color: #FFFFFF;
+  font-size: 32px;
+  text-align: center;
+  padding: 2.5em 0;
+  height: auto;
+  margin-bottom: 75px; }
+  @media screen and (min-width: 767px) {
+    .singleblog_hero, .blog_hero {
+      font-size: 48px; } }
+
+.blog_hero {
+  padding: 4em 0; }
+
+.singlepost-title-single {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto 35px;
+  font-size: 1.7em; }
+  @media screen and (min-width: 767px) {
+    .singlepost-title-single {
+      width: 65%;
+      font-size: 2em; } }
+
+.iff_post_meta {
+  width: 100%;
+  margin: 0 auto 50px; }
+  @media screen and (min-width: 600px) {
+    .iff_post_meta {
+      width: 65%;
+      max-width: 340px; } }
+
+ul.post-categories {
+  list-style: none;
+  margin: 0; }
+  ul.post-categories li {
+    display: inline; }
+
+.iff_cat ul.post-categories li a {
+  color: #FFFFFF; }
+
+.single_copy {
+  font-size: 15px;
+  font-family: "Libre Baskerville", serif; }
+  .single_copy.center {
+    text-align: center; }
+
+.iff-entry-content {
+  font-size: 15px;
+  width: 100%;
+  margin: 50px auto 75px; }
+  @media screen and (min-width: 767px) {
+    .iff-entry-content {
+      font-size: 18px;
+      width: 80%; } }
+
+.nav-links {
+  display: initial !important; }
+  @media screen and (min-width: 767px) {
+    .nav-links {
+      display: flex !important; } }
+
+.nav-previous,
+.nav-next {
+  width: 100% !important;
+  flex: none !important;
+  padding-bottom: 25px; }
+  @media screen and (min-width: 767px) {
+    .nav-previous,
+    .nav-next {
+      flex: 1 0 50% !important;
+      width: auto !important; } }
+
+.nav-next {
+  text-align: initial !important; }
+  @media screen and (min-width: 767px) {
+    .nav-next {
+      text-align: end; } }
+
+.iff-back {
+  text-align: center;
+  padding-bottom: 25px; }
 
 #mc_embed_signup_scroll {
   width: 85%;

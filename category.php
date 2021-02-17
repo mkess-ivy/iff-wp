@@ -11,20 +11,15 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-	<div class="singleblog_hero" style="background-image:url(<?php echo esc_url(the_field('iffblog_hero_img_single', 'option')['url']); ?>);">IFF News</div>
+	<div class="singleblog_hero" style="background-image:url(<?php echo esc_url(the_field('iffblog_hero_img_single', 'option')['url']); ?>);"><span class="iff_cat">Category: <?php the_category(); ?></span></div>
 		<div class="wrapper">
 		<?php
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', 'post' );
+			get_template_part( 'template-parts/content', 'category' );
 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'iff' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'iff' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
+			
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
