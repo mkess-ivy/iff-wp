@@ -13,7 +13,7 @@
 
 	<div class="iff_post">
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<div class="featured_img_iff"><?php the_post_thumbnail(); ?></div>
+			<div class="featured_img_iff"><?php the_post_thumbnail(); ?></div> 
 
 			<header class="entry-header">
 				<?php
